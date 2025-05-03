@@ -1,0 +1,12 @@
+<h2>📄 My Booking History</h2>
+<a href="/">Back to Chatbot</a> | <a href="/logout">Logout</a>
+<hr>
+{% if bookings %}
+    <ul>
+    {% for booking in bookings %}
+        <li><strong>{{ booking.site_name }}</strong> - {{ booking.date_booked.strftime("%Y-%m-%d %H:%M:%S") }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No bookings found.</p>
+{% endif %}

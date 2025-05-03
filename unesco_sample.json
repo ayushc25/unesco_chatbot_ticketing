@@ -1,0 +1,26 @@
+{
+    "features": [
+      {
+        "properties": {
+          "name_en": "Great Wall of China",
+          "states_name_en": "China",
+          "category_short": "Cultural"
+        }
+      },
+      {
+        "properties": {
+          "name_en": "Machu Picchu",
+          "states_name_en": "Peru",
+          "category_short": "Cultural"
+        }
+      },
+      {
+        "properties": {
+          "name_en": "Statue of Liberty",
+          "states_name_en": "United States",
+          "category_short": "Cultural"
+        }
+      }
+    ]
+  }
+  

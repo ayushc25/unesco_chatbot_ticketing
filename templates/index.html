@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎟️ UNESCO Ticketing Chatbot</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .chat-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .chat-box {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .chat-message {
+      margin: 5px 0;
+    }
+    .chat-user {
+      text-align: right;
+      color: blue;
+    }
+    .chat-bot {
+      text-align: left;
+      color: green;
+    }
+    .booking-table {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container chat-container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h4>Welcome, {{ user }}!</h4>
+    <a href="{{ url_for('logout') }}" class="btn btn-danger btn-sm">Logout</a>
+  </div>
+
+  <hr>
+
+  <div class="chat-box" id="chat-box">
+    <div class="chat-message chat-bot">🤖 Hi! I can help you book UNESCO World Heritage Site tickets.</div>
+    <div class="chat-message chat-bot">Type something like: <strong>'Book ticket for Taj Mahal'</strong></div>
+    <div class="chat-message chat-bot">You can also type: <strong>'List sites'</strong> or 'Show my bookings'</div>
+  </div>
+
+  <form id="chat-form" class="input-group">
+    <input type="text" id="user-input" class="form-control" placeholder="Type your message..." required>
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form>
+
+  {% if bookings %}
+    <div class="booking-table">
+      <h5 class="mt-4">📌 Your Booked Sites:</h5>
+      <ul class="list-group">
+        {% for booking in bookings %}
+          <li class="list-group-item">{{ booking.site_name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+document.getElementById('chat-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const input = document.getElementById('user-input');
+  const message = input.value.trim();
+  if (!message) return;
+
+  const chatBox = document.getElementById('chat-box');
+  chatBox.innerHTML += `<div class="chat-message chat-user">You: ${message}</div>`;
+  input.value = '';
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  const res = await fetch('/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message })
+  });
+
+  const data = await res.json();
+  chatBox.innerHTML += `<div class="chat-message chat-bot">Bot: ${data.response}</div>`;
+  chatBox.scrollTop = chatBox.scrollHeight;
+});
+</script>
+
+</body>
+</html>

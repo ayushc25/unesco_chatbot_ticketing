@@ -1,0 +1,54 @@
+{
+  "sites": [
+    {
+      "name": "Taj Mahal",
+      "description": "A symbol of eternal love and a masterpiece of Mughal architecture in India.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Taj_Mahal-05.jpg"
+    },
+    {
+      "name": "Great Wall of China",
+      "description": "An ancient series of walls and fortifications built to protect Chinese states from invasions.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/GreatWallNearBeijingWinter.JPG"
+    },
+    {
+      "name": "Machu Picchu",
+      "description": "A 15th-century Inca citadel located in the Andes Mountains of Peru.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
+    },
+    {
+      "name": "Colosseum",
+      "description": "A historic amphitheater in Rome known for gladiator contests and Roman architecture.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg"
+    },
+    {
+      "name": "Pyramids of Giza",
+      "description": "Ancient pyramid structures in Egypt and one of the Seven Wonders of the Ancient World.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg"
+    },
+    {
+      "name": "Acropolis of Athens",
+      "description": "An ancient citadel on a rocky outcrop above Athens with temples like the Parthenon.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Acropolis_of_Athens_2007_1.jpg"
+    },
+    {
+      "name": "Petra",
+      "description": "A historical and archaeological city in southern Jordan carved into rose-red rock.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Al_Khazneh_Petra_edit.jpg"
+    },
+    {
+      "name": "Stonehenge",
+      "description": "A prehistoric monument in England made of standing stones aligned with the sun.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg"
+    },
+    {
+      "name": "Statue of Liberty",
+      "description": "A symbol of freedom and democracy located on Liberty Island in New York Harbor.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg"
+    },
+    {
+      "name": "Angkor Wat",
+      "description": "A massive temple complex in Cambodia and the largest religious monument in the world.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Angkor_Wat_temple.jpg"
+    }
+  ]
+}
